@@ -47,6 +47,7 @@ html {
 
 body {
     background-color: var(--black);
+    overflow-x: hidden;
 }
 
 .container {
@@ -57,6 +58,15 @@ section {
     margin: 0 auto;
     max-width: 1200px;
     padding: 2rem;
+}
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .btn {
@@ -110,10 +120,11 @@ section {
 }
 
 .home {
-    background: url('assets/photos/img1.jpg') no-repeat rgba(0, 0, 0, .5);
+    background: url('assets/photos/home3_bg.jpeg') no-repeat rgba(0, 0, 0, .5);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .home .flex {
@@ -160,15 +171,16 @@ section {
 }
 
 .about {
-    background: url('assets/photos/img5.jpg') no-repeat rgba(0, 0, 0, .5);
+    background: url('assets/photos/about2_bg.webp') no-repeat rgba(0, 0, 0, .5);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .about .details {
     border-radius: .5rem;
-    background: url('assets/photos/about.jpg') no-repeat rgba(0, 0, 0, .5);
+    background: url('assets/photos/details2_bg.jpeg') no-repeat rgba(0, 0, 0, .5);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -248,6 +260,304 @@ section {
 .about .grid .box:hover img {
     transform: scale(1.1);
 }
+
+.reviews {
+    background: url('assets/photos/img.jpg') no-repeat rgba(0, 0, 0, .9);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.reviews .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.reviews .grid .box {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.reviews .grid .box img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.reviews .grid .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.reviews .grid .box p {
+    padding: 1rem;
+    line-height: 2;
+    color: var(--light-white);
+    font-size: 1.5rem;
+}
+
+.reviews .grid .box .stars {
+    margin-top: 1rem;
+}
+
+.reviews .grid .box .stars i {
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.reviews .grid .box:hover {
+    background-color: var(--light-black);
+}
+
+.tours {
+    background: url('assets/photos/img2.jpg') no-repeat rgba(0, 0, 0, .9);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.tours .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.tours .grid .box {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    position: relative;
+}
+
+.tours .grid .box .price {
+    position: absolute;
+    top: 2.9rem;
+    left: 3rem;
+    border-radius: .5rem;
+    background: var(--light-black);
+    font-size: 1.8rem;
+    padding: .8rem 1rem;
+}
+
+.tours .grid .box .price i {
+    color: var(--main-color);
+    margin-right: .5rem;
+}
+
+.tours .grid .box .price span {
+    color: var(--white);
+}
+
+.tours .grid .box .image {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.tours .grid .box .name {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.tours .grid .box .address {
+    font-size: 1.7rem;
+    color: var(--light-white);
+    line-height: 1.5;
+    padding: .5rem 0;
+}
+
+.tours .grid .box:hover {
+    background-color: var(--light-black);
+}
+
+.tours .grid .box:hover .price {
+    background-color: var(--black);
+}
+
+.destinations {
+    background: url('assets/photos/img6.jpg') no-repeat rgba(0, 0, 0, .9);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.destinations .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.destinations .grid .box {
+    position: relative;
+    height: 40rem;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.destinations .grid .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.destinations .grid .box h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-black);
+    backdrop-filter: blur(.4rem);
+    transition: .2s linear;
+    opacity: 0;
+}
+
+.destinations .grid .box h3 span {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.destinations .grid .box:hover h3 {
+    opacity: 1;
+}
+
+.contact {
+    background: url('assets/photos/img1.jpg') no-repeat rgba(0, 0, 0, .9);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row .map {
+    width: 100%;
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    background-color: var(--light-black);
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: none;
+}
+
+.contact .row form .box::placeholder {
+    color: var(--light-white);
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .grid {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact .grid .box {
+    padding: 3rem 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+    text-align: center;
+}
+
+.contact .grid .box i {
+    height: 5rem;
+    width: 6rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    background-color: var(--light-black);
+    border-radius: .5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.contact .grid .box h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.contact .grid .box a {
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--light-white);
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.contact .grid .box a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.contact .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    color: var(--light-white);
+}
+
+.contact .credit span {
+    color: var(--main-color);
+}
 /* Hide header on smaller screens */
 
 #menu-btn {
@@ -260,6 +570,11 @@ section {
 @media (max-width: 991px) {
     html {
         font-size: 55%;
+    }
+
+    .heading {
+        font-size: 5rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -303,10 +618,18 @@ section {
     .header .flex .navbar a:hover {
         background-color: var(--light-bg);
     }
+
+    .heading {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
     }
 }

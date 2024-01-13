@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Contact</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
         <section class="flex">
             <a href="index.html" class="logo">TKEcorp.</a>
             <nav class="navbar">
@@ -22,6 +22,46 @@
             <div id="menu-btn" class="fas fa-bars"></div>
         </section>
     </header>
+    <!-- contact sections starts-->
+    <div class="container contact">
+        <h1 class="heading" data-aos="zoom-out">Contact Us</h1>
+        <section>
+            <div class="row">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9359660912855!2d1.2078485747570855!3d6.1393049275092295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10215f395b6fdb4b%3A0x8fad7cb53523e789!2sTokoin%20Wuiti!5e0!3m2!1sfr!2stg!4v1705065861824!5m2!1sfr!2stg" 
+                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="flip-left">
+                </iframe>
+                <form action="" method="post" data-aos="flip-right">
+                    <h3>Get In Touch</h3>
+                    <input type="text" name="name" required maxlength="50" placeholder="Enter Your Name" class="box">
+                    <input type="email" name="email" required maxlength="50" placeholder="Enter Your Email" class="box">
+                    <input type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="Enter Your Number" class="box">
+                    <textarea name="message" class="box" required maxlength="1000" cols="30" rows="10"></textarea>
+                    <input type="submit" value="send message" name="send" class="btn">
+                </form>
+            </div>
+            <div class="grid">
+                <div class="box" data-aos="fade-up">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone Number</h3>
+                    <a href="Tel:123456789">+228-97-67-03-81</a>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Address</h3>
+                    <a href="tonamawulolo@gmail.com">TKEcorp.mawulolo@gmail.com</a>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Office Address</h3>
+                    <a href="#">Jean-Paul II, Tokoin-Wuiti, Togo</a>
+                </div>
+            </div>
+            <div class="credit">
+                &copy; copyright @ 2024 by <span>TKEcorp.</span> | All rights reserved !
+            </div>
+        </section>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
